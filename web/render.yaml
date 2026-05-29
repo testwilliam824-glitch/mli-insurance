@@ -1,9 +1,3 @@
-databases:
-  - name: mli-db
-    plan: free
-    databaseName: mli
-    user: mli
-
 services:
   - type: web
     name: mli-insurance
@@ -16,10 +10,6 @@ services:
     envVars:
       - key: NODE_ENV
         value: production
-      - key: DATABASE_URL
-        fromDatabase:
-          name: mli-db
-          property: connectionString
       - key: ADMIN_USER
         value: admin
       - key: ADMIN_PASS
