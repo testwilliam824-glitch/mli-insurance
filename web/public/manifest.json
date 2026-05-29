@@ -1,13 +1,13 @@
 {
   "name": "三商美邦人壽智能服務平台",
   "short_name": "三商美邦人壽",
-  "description": "壽險 / 產險 / 車險 / 理賠檢視一站式智能諮詢",
+  "description": "人壽險規劃 + 理賠檢視智能服務",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#1e3a5f",
-  "theme_color": "#1e3a5f",
+  "background_color": "#0f5132",
+  "theme_color": "#0f5132",
   "lang": "zh-TW",
   "icons": [
     {
@@ -31,21 +31,9 @@
   ],
   "shortcuts": [
     {
-      "name": "壽險諮詢",
-      "short_name": "壽險",
+      "name": "人壽保險規劃",
+      "short_name": "人壽",
       "url": "/life.html",
-      "icons": [{ "src": "/icons/icon.svg", "sizes": "any" }]
-    },
-    {
-      "name": "產險諮詢",
-      "short_name": "產險",
-      "url": "/property.html",
-      "icons": [{ "src": "/icons/icon.svg", "sizes": "any" }]
-    },
-    {
-      "name": "車險諮詢",
-      "short_name": "車險",
-      "url": "/auto.html",
       "icons": [{ "src": "/icons/icon.svg", "sizes": "any" }]
     },
     {
