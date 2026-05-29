@@ -1,0 +1,59 @@
+{
+  "name": "三商美邦人壽智能服務平台",
+  "short_name": "三商美邦人壽",
+  "description": "壽險 / 產險 / 車險 / 理賠檢視一站式智能諮詢",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#1e3a5f",
+  "theme_color": "#1e3a5f",
+  "lang": "zh-TW",
+  "icons": [
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "壽險諮詢",
+      "short_name": "壽險",
+      "url": "/life.html",
+      "icons": [{ "src": "/icons/icon.svg", "sizes": "any" }]
+    },
+    {
+      "name": "產險諮詢",
+      "short_name": "產險",
+      "url": "/property.html",
+      "icons": [{ "src": "/icons/icon.svg", "sizes": "any" }]
+    },
+    {
+      "name": "車險諮詢",
+      "short_name": "車險",
+      "url": "/auto.html",
+      "icons": [{ "src": "/icons/icon.svg", "sizes": "any" }]
+    },
+    {
+      "name": "理賠檢視",
+      "short_name": "理賠",
+      "url": "/claim.html",
+      "icons": [{ "src": "/icons/icon.svg", "sizes": "any" }]
+    }
+  ],
+  "categories": ["finance", "business"]
+}

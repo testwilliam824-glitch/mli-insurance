@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a5f"/>
+      <stop offset="100%" stop-color="#2d5a87"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="96" fill="url(#bg)"/>
+  <g fill="#fff">
+    <!-- Bank building base -->
+    <rect x="96" y="380" width="320" height="32" rx="4"/>
+    <!-- Triangular roof -->
+    <polygon points="256,108 96,196 416,196"/>
+    <rect x="96" y="196" width="320" height="22"/>
+    <!-- 5 Pillars -->
+    <rect x="112" y="226" width="36" height="146"/>
+    <rect x="172" y="226" width="36" height="146"/>
+    <rect x="232" y="226" width="48" height="146"/>
+    <rect x="304" y="226" width="36" height="146"/>
+    <rect x="364" y="226" width="36" height="146"/>
+    <!-- Gold accent dot in center triangle -->
+    <circle cx="256" cy="170" r="14" fill="#c9a227"/>
+  </g>
+</svg>

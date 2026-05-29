@@ -1,0 +1,76 @@
+:root {
+  --primary: #0f5132;
+  --primary-light: #198754;
+  --accent: #20a97c;
+  --gold: #c9a227;
+  --bg: #f0f2f5;
+  --text: #333;
+  --muted: #666;
+  --border: #e0e0e0;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --danger: #dc2626;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: "Microsoft JhengHei", "PingFang TC", -apple-system, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  min-height: 100vh;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+}
+
+.btn {
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-size: 15px;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(30, 58, 95, 0.3);
+}
+
+.btn-secondary {
+  background: #f0f0f0;
+  color: var(--text);
+}
+
+.btn-secondary:hover { background: #e0e0e0; }
+
+.btn-success {
+  background: var(--success);
+  color: white;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.tag {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.tag-high { background: #fee2e2; color: #dc2626; }
+.tag-medium { background: #fef3c7; color: #d97706; }
+.tag-low { background: #d1fae5; color: #059669; }
+.tag-new { background: #dbeafe; color: #1e40af; }
+.tag-contacted { background: #ede9fe; color: #7c3aed; }
+.tag-closed { background: #f3f4f6; color: #6b7280; }

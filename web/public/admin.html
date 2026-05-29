@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>三商美邦人壽智能服務平台 - 後台管理</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/admin.css">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#0f5132">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="三商美邦人壽">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="/icons/icon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16.png">
+</head>
+<body>
+  <div class="login-page" id="loginPage">
+    <div class="login-box">
+      <h2>🏦 三商美邦人壽智能服務平台</h2>
+      <p class="subtitle">後台管理</p>
+      <div class="form-group"><label>使用者名稱</label><input type="text" id="username" placeholder="使用者名稱"></div>
+      <div class="form-group"><label>密碼</label><input type="password" id="password" placeholder="密碼"></div>
+      <button class="login-btn" id="loginBtn">登入</button>
+      <p class="login-hint">預設帳號：admin / 密碼：mli2024</p>
+      <p class="login-error" id="loginError"></p>
+    </div>
+  </div>
+
+  <div class="main-content" id="mainContent">
+    <header class="admin-header">
+      <h1>🏦 三商美邦人壽智能服務平台 - 後台管理</h1>
+      <div class="user-info">
+        <span id="lineStatus" class="line-status">…</span>
+        <span>👤 管理員</span>
+        <button class="logout-btn" id="logoutBtn">登出</button>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card"><div class="icon icon-blue">👥</div><div class="label">總客戶數</div><div class="value" id="statTotal">0</div><div class="hint">所有提交資料</div></div>
+        <div class="stat-card"><div class="icon icon-green">📋</div><div class="label">待聯繫</div><div class="value" id="statPending">0</div><div class="hint">需盡快處理</div></div>
+        <div class="stat-card"><div class="icon icon-orange">💰</div><div class="label">高資產客戶</div><div class="value" id="statHigh">0</div><div class="hint">年收 500 萬+ / 資產 3000 萬+</div></div>
+        <div class="stat-card"><div class="icon icon-purple">📊</div><div class="label">本週新增</div><div class="value" id="statWeekly">0</div><div class="hint">最近 7 天</div></div>
+      </div>
+
+      <div class="filter-section">
+        <div class="filter-grid">
+          <div class="filter-group"><label>搜尋姓名/電話</label><input type="text" id="searchText" placeholder="輸入關鍵字..."></div>
+          <div class="filter-group">
+            <label>保險類型</label>
+            <select id="filterType">
+              <option value="">全部</option>
+              <option value="life">💼 壽險</option>
+              <option value="property">🏠 產險</option>
+              <option value="auto">🚗 車險</option>
+              <option value="claim">📋 理賠</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label>年齡區間</label>
+            <select id="filterAge">
+              <option value="">全部</option>
+              <option value="0-18">0-18 歲</option>
+              <option value="19-30">19-30 歲</option>
+              <option value="31-50">31-50 歲</option>
+              <option value="51-65">51-65 歲</option>
+              <option value="66+">66 歲以上</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label>年收入</label>
+            <select id="filterIncome">
+              <option value="">全部</option>
+              <option value="below_50">50 萬以下</option>
+              <option value="50_100">50-100 萬</option>
+              <option value="100_200">100-200 萬</option>
+              <option value="200_500">200-500 萬</option>
+              <option value="above_500">500 萬+</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label>處理狀態</label>
+            <select id="filterStatus">
+              <option value="">全部</option>
+              <option value="new">新案件</option>
+              <option value="contacted">已聯繫</option>
+              <option value="closed">已結案</option>
+            </select>
+          </div>
+        </div>
+        <div class="filter-actions">
+          <button type="button" class="btn btn-primary" id="searchBtn">🔍 搜尋</button>
+          <button type="button" class="btn btn-secondary" id="resetBtn">🔄 重置</button>
+          <button type="button" class="btn btn-success" id="exportBtn">📥 匯出 CSV</button>
+          <button type="button" class="btn btn-secondary" id="reloadBtn">↻ 重新載入</button>
+        </div>
+      </div>
+
+      <div class="table-section">
+        <div class="table-header">
+          <h3>📋 客戶資料列表</h3>
+          <span style="color:var(--muted);font-size:14px;">共 <span id="totalRecords">0</span> 筆</span>
+        </div>
+        <div style="overflow-x:auto;">
+          <table>
+            <thead>
+              <tr>
+                <th>時間</th><th>類型</th><th>姓名</th><th>電話</th><th>年齡</th><th>年收入</th>
+                <th>規劃目標</th><th>推薦保單</th><th>狀態</th><th>操作</th>
+              </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+          </table>
+        </div>
+        <div class="pagination" id="pagination"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="customerModal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3>📋 客戶詳細資料</h3>
+        <button class="modal-close" id="modalClose">×</button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="js/admin.js"></script>
+  <script src="/js/pwa.js" defer></script>
+</body>
+</html>

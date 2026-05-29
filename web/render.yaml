@@ -1,0 +1,36 @@
+databases:
+  - name: mli-db
+    plan: free
+    databaseName: mli
+    user: mli
+
+services:
+  - type: web
+    name: mli-insurance
+    runtime: node
+    plan: free
+    rootDir: web/server
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        fromDatabase:
+          name: mli-db
+          property: connectionString
+      - key: ADMIN_USER
+        value: admin
+      - key: ADMIN_PASS
+        sync: false
+      - key: LINK_SECRET
+        generateValue: true
+      - key: LINE_CHANNEL_SECRET
+        sync: false
+      - key: LINE_CHANNEL_ACCESS_TOKEN
+        sync: false
+      - key: LINE_ADMIN_USER_ID
+        sync: false
+      - key: PUBLIC_URL
+        sync: false

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="insurance-type" content="life">
+  <title>三商美邦人壽險智能推薦</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/questionnaire.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js" defer></script>
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#0f5132">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="三商美邦人壽">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="/icons/icon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16.png">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🏦 三商美邦人壽險智能推薦</h1>
+      <p>為您量身打造最適合的保險規劃方案</p>
+    </div>
+
+    <div class="progress-bar"><div class="progress-fill" id="progressBar"></div></div>
+
+    <div id="questionnaire" class="content">
+      <div class="question active" data-q="1" data-type="single" data-key="age">
+        <span class="question-number">問題 1 / 14</span>
+        <h3>您的年齡區間是？</h3>
+        <div class="options">
+          <div class="option" data-value="0-18"><input type="radio" name="age"><span>0-18 歲（學齡期）</span></div>
+          <div class="option" data-value="19-30"><input type="radio" name="age"><span>19-30 歲（青年期）</span></div>
+          <div class="option" data-value="31-50"><input type="radio" name="age"><span>31-50 歲（壯年期）</span></div>
+          <div class="option" data-value="51-65"><input type="radio" name="age"><span>51-65 歲（準退休期）</span></div>
+          <div class="option" data-value="66+"><input type="radio" name="age"><span>66 歲以上（退休期）</span></div>
+        </div>
+      </div>
+
+      <div class="question" data-q="2" data-type="single" data-key="gender">
+        <span class="question-number">問題 2 / 14</span>
+        <h3>您的性別？</h3>
+        <div class="options">
+          <div class="option" data-value="male"><input type="radio" name="gender"><span>男性</span></div>
+          <div class="option" data-value="female"><input type="radio" name="gender"><span>女性</span></div>
+        </div>
+      </div>
+
+      <div class="question" data-q="3" data-type="single" data-key="job">
+        <span class="question-number">問題 3 / 14</span>
+        <h3>您目前的職業類別？</h3>
+        <div class="options">
+          <div class="option" data-value="employee"><input type="radio" name="job"><span>一般上班族</span></div>
+          <div class="option" data-value="business_owner"><input type="radio" name="job"><span>企業主 / 自營商</span></div>
+          <div class="option" data-value="professional"><input type="radio" name="job"><span>專業人士（醫師、律師、會計師等）</span></div>
+          <div class="option" data-value="sales"><input type="radio" name="job"><span>業務 / 外勤工作</span></div>
+          <div class="option" data-value="retired"><input type="radio" name="job"><span>已退休</span></div>
+        </div>
+      </div>
+
+      <div class="question" data-q="4" data-type="single" data-key="income">
+        <span class="question-number">問題 4 / 14</span>
+        <h3>您的年收入大約是多少？</h3>
+        <div class="options">
+          <div class="option" data-value="below_50"><input type="radio" name="income"><span>50 萬以下</span></div>
+          <div class="option" data-value="50_100"><input type="radio" name="income"><span>50 萬 - 100 萬</span></div>
+          <div class="option" data-value="100_200"><input type="radio" name="income"><span>100 萬 - 200 萬</span></div>
+          <div class="option" data-value="200_500"><input type="radio" name="income"><span>200 萬 - 500 萬</span></div>
+          <div class="option" data-value="above_500"><input type="radio" name="income"><span>500 萬以上（高資產族群）</span></div>
+        </div>
+      </div>
+
+      <div class="question" data-q="5" data-type="single" data-key="family">
+        <span class="question-number">問題 5 / 14</span>
+        <h3>您目前的家庭狀況？</h3>
+        <div class="options">
+          <div class="option" data-value="single"><input type="radio" name="family"><span>單身</span></div>
+          <div class="option" data-value="married_no_kid"><input type="radio" name="family"><span>已婚無子女</span></div>
+          <div class="option" data-value="married_young_kid"><input type="radio" name="family"><span>已婚有未成年子女</span></div>
+          <div class="option" data-value="married_adult_kid"><input type="radio" name="family"><span>已婚子女已成年</span></div>
+          <div class="option" data-value="empty_nest"><input type="radio" name="family"><span>空巢期（子女獨立）</span></div>
+        </div>
+      </div>
+
+      <div class="question" data-q="6" data-type="single" data-key="budget">
+        <span class="question-number">問題 6 / 14</span>
+        <h3>您每月願意支出多少保費？</h3>
+        <div class="options">
+          <div class="option" data-value="below_3000"><input type="radio" name="budget"><span>3,000 元以下</span></div>
+          <div class="option" data-value="3000_5000"><input type="radio" name="budget"><span>3,000 - 5,000 元</span></div>
+          <div class="option" data-value="5000_10000"><input type="radio" name="budget"><span>5,000 - 10,000 元</span></div>
+          <div class="option" data-value="10000_20000"><input type="radio" name="budget"><span>10,000 - 20,000 元</span></div>
+          <div class="option" data-value="above_20000"><input type="radio" name="budget"><span>20,000 元以上</span></div>
+        </div>
+      </div>
+
+      <div class="question" data-q="7" data-type="multi" data-key="existing_insurance">
+        <span class="question-number">問題 7 / 14</span>
+        <h3>您目前已有哪些保險？（可複選）</h3>
+        <div class="checkbox-group">
+          <div class="checkbox-item" data-value="life"><input type="checkbox"><span>壽險</span></div>
+          <div class="checkbox-item" data-value="medical"><input type="checkbox"><span>醫療險</span></div>
+          <div class="checkbox-item" data-value="accident"><input type="checkbox"><span>意外險</span></div>
+          <div class="checkbox-item" data-value="cancer"><input type="checkbox"><span>癌症險</span></div>
+          <div class="checkbox-item" data-value="saving"><input type="checkbox"><span>儲蓄險 / 還本型保單</span></div>
+          <div class="checkbox-item" data-value="none"><input type="checkbox"><span>目前沒有保單</span></div>
+        </div>
+      </div>
+
+      <div class="question" data-q="8" data-type="multi" data-key="planning_goals">
+        <span class="question-number">問題 8 / 14</span>
+        <h3>您目前的規劃目標？（可複選）</h3>
+        <div class="checkbox-group">
+          <div class="checkbox-item" data-value="protection"><input type="checkbox"><span>基本保障（醫療/意外/壽險）</span></div>
+          <div class="checkbox-item" data-value="saving"><input type="checkbox"><span>儲蓄理財</span></div>
+          <div class="checkbox-item" data-value="retirement"><input type="checkbox"><span>退休規劃</span></div>
+          <div class="checkbox-item" data-value="inheritance"><input type="checkbox"><span>遺產傳承</span></div>
+          <div class="checkbox-item" data-value="tax_saving"><input type="checkbox"><span>節稅規劃</span></div>
+          <div class="checkbox-item" data-value="debt_isolation"><input type="checkbox"><span>債務隔離 / 資產保護</span></div>
+        </div>
+      </div>
+
+      <div class="question" data-q="9" data-type="single" data-key="asset">
+        <span class="question-number">問題 9 / 14</span>
+        <h3>您目前的資產規模（不含自住房）？</h3>
+        <div class="options">
+          <div class="option" data-value="below_500"><input type="radio" name="asset"><span>500 萬以下</span></div>
+          <div class="option" data-value="500_1000"><input type="radio" name="asset"><span>500 萬 - 1000 萬</span></div>
+          <div class="option" data-value="1000_3000"><input type="radio" name="asset"><span>1000 萬 - 3000 萬</span></div>
+          <div class="option" data-value="3000_10000"><input type="radio" name="asset"><span>3000 萬 - 1 億</span></div>
+          <div class="option" data-value="above_10000"><input type="radio" name="asset"><span>1 億以上</span></div>
+        </div>
+      </div>
+
+      <div class="question" data-q="10" data-type="single" data-key="tax_need">
+        <span class="question-number">問題 10 / 14</span>
+        <h3>您是否有節稅規劃需求？</h3>
+        <div class="options">
+          <div class="option" data-value="yes_urgent"><input type="radio" name="tax_need"><span>是，這是我的優先需求</span></div>
+          <div class="option" data-value="yes_consider"><input type="radio" name="tax_need"><span>是，可以考慮</span></div>
+          <div class="option" data-value="no"><input type="radio" name="tax_need"><span>暫時沒有這個需求</span></div>
+          <div class="option" data-value="unsure"><input type="radio" name="tax_need"><span>不了解，需要諮詢</span></div>
+        </div>
+      </div>
+
+      <div class="question" data-q="11" data-type="single" data-key="inheritance">
+        <span class="question-number">問題 11 / 14</span>
+        <h3>您是否考慮資產傳承給下一代？</h3>
+        <div class="options">
+          <div class="option" data-value="yes_plan"><input type="radio" name="inheritance"><span>是，已有規劃想法</span></div>
+          <div class="option" data-value="yes_consider"><input type="radio" name="inheritance"><span>是，但還沒開始規劃</span></div>
+          <div class="option" data-value="maybe"><input type="radio" name="inheritance"><span>可能會考慮</span></div>
+          <div class="option" data-value="no"><input type="radio" name="inheritance"><span>暫時沒有這個打算</span></div>
+        </div>
+      </div>
+
+      <div class="question" data-q="12" data-type="single" data-key="debt_risk">
+        <span class="question-number">問題 12 / 14</span>
+        <h3>您是否擔心債務問題影響家族資產？</h3>
+        <div class="options">
+          <div class="option" data-value="yes_business"><input type="radio" name="debt_risk"><span>是，我是企業主 / 有投資</span></div>
+          <div class="option" data-value="yes_professional"><input type="radio" name="debt_risk"><span>是，我是專業人士（醫師/律師等）</span></div>
+          <div class="option" data-value="maybe"><input type="radio" name="debt_risk"><span>有一點擔心</span></div>
+          <div class="option" data-value="no"><input type="radio" name="debt_risk"><span>沒有這個困擾</span></div>
+        </div>
+      </div>
+
+      <div class="question" data-q="13" data-type="single" data-key="risk">
+        <span class="question-number">問題 13 / 14</span>
+        <h3>您的投資風險偏好？</h3>
+        <div class="options">
+          <div class="option" data-value="conservative"><input type="radio" name="risk"><span>保守型（本金安全優先）</span></div>
+          <div class="option" data-value="moderate"><input type="radio" name="risk"><span>穩健型（可接受小幅波動）</span></div>
+          <div class="option" data-value="aggressive"><input type="radio" name="risk"><span>積極型（追求較高報酬）</span></div>
+          <div class="option" data-value="unsure"><input type="radio" name="risk"><span>不確定，需要專業建議</span></div>
+        </div>
+      </div>
+
+      <div class="question" data-q="14" data-type="single" data-key="foreign_currency">
+        <span class="question-number">問題 14 / 14</span>
+        <h3>您是否有外幣配置需求？</h3>
+        <div class="options">
+          <div class="option" data-value="yes_usd"><input type="radio" name="foreign_currency"><span>有，主要考慮美元</span></div>
+          <div class="option" data-value="yes_aud"><input type="radio" name="foreign_currency"><span>有，考慮澳幣 / 其他貨幣</span></div>
+          <div class="option" data-value="maybe"><input type="radio" name="foreign_currency"><span>考慮中，想了解</span></div>
+          <div class="option" data-value="no"><input type="radio" name="foreign_currency"><span>暫時不需要</span></div>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <button type="button" class="btn btn-secondary" id="prevBtn">上一題</button>
+        <button type="button" class="btn btn-primary" id="nextBtn">下一題</button>
+      </div>
+    </div>
+
+    <div id="result" class="result-section">
+      <div class="header">
+        <h1>🎉 專屬保單推薦完成！</h1>
+        <p>根據您的需求，為您量身規劃以下方案</p>
+      </div>
+      <div class="profile-summary">
+        <h4>📋 您的需求摘要</h4>
+        <div id="profileContent"></div>
+      </div>
+
+      <div class="allocation-section">
+        <h4>💰 建議預算配置</h4>
+        <p class="allocation-budget" id="allocationBudget"></p>
+        <div class="allocation-chart-wrap">
+          <canvas id="allocationChart"></canvas>
+        </div>
+        <div class="allocation-table" id="allocationTable"></div>
+      </div>
+
+      <!-- Phase A：送出前看到圓餅圖，要留資料解鎖建議書 -->
+      <div class="contact-section" id="contactSection">
+        <h4>📑 想看完整的個人化保單建議書嗎？</h4>
+        <p class="contact-intro">
+          以上是您的<strong>預算配置預覽</strong>。留下聯絡資訊即可解鎖完整的：<br>
+          ✅ 推薦保單組合（含預估保費）<br>
+          ✅ 適合您的保障原因說明<br>
+          ✅ 三商美邦人壽專屬顧問 <strong>溫寧</strong> 一對一諮詢<br>
+          <span class="muted">您的資訊受嚴格保密，僅供保險諮詢使用。</span>
+        </p>
+        <div class="input-group"><label>姓名 <span class="req">*</span></label><input type="text" id="name" placeholder="請輸入您的姓名"></div>
+        <div class="input-group"><label>電話 <span class="req">*</span></label><input type="tel" id="phone" placeholder="📞 請輸入聯絡電話"></div>
+        <div class="input-group"><label>LINE ID</label><input type="text" id="line_id" placeholder="💬 您的 LINE ID（選填，方便快速聯繫）"></div>
+        <div class="input-group"><label>Email</label><input type="email" id="email" placeholder="✉️ 選填"></div>
+        <div class="input-group">
+          <label>方便聯絡時間</label>
+          <select id="contact_time">
+            <option value="">請選擇</option>
+            <option value="morning">上午 9:00-12:00</option>
+            <option value="afternoon">下午 13:00-17:00</option>
+            <option value="evening">晚上 18:00-21:00</option>
+            <option value="anytime">任何時間都可以</option>
+          </select>
+        </div>
+        <button type="button" class="btn btn-primary submit-btn" id="submitBtn">📑 取得個人化建議書</button>
+      </div>
+
+      <!-- Phase B：送出後解鎖建議書 + 聯繫專員 CTA -->
+      <div id="proposalSection" style="display:none;">
+        <div class="proposal-banner">
+          <h2>📑 您的個人化保單建議書</h2>
+          <p>編號：<span id="proposalId"></span>　已寄送一份至您留下的聯絡方式</p>
+        </div>
+
+        <h4 class="section-title">🎯 推薦保單組合</h4>
+        <div id="recommendations"></div>
+
+        <div class="disclaimer" id="disclaimer"></div>
+
+        <div class="cta-section">
+          <h4>💬 想更詳細了解？聯繫專員 <span style="color:#0f5132;">溫寧</span> 為您完整規劃</h4>
+          <p>專業顧問 <strong>溫寧</strong> 將依您的完整財務狀況為您客製設計</p>
+          <div class="cta-buttons">
+            <a class="cta-button cta-line" id="lineContactBtn" href="#" target="_blank">💬 LINE 立即諮詢溫寧</a>
+            <a class="cta-button cta-phone" href="tel:0212345678">📞 撥打專員溫寧</a>
+          </div>
+          <p class="cta-hint">服務時間：週一至週五 09:00-18:00 ・ 專屬業務：溫寧</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/questionnaire.js"></script>
+  <script src="/js/pwa.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>三商美邦人壽智能服務平台</title>
+  <link rel="stylesheet" href="css/common.css">
+  <style>
+    body {
+      background: linear-gradient(135deg, #0f5132 0%, #198754 60%, #20a97c 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .landing { max-width: 880px; width: 100%; }
+
+    .landing-header {
+      text-align: center;
+      color: white;
+      margin-bottom: 40px;
+    }
+
+    .landing-header h1 {
+      font-size: 34px;
+      margin-bottom: 12px;
+      letter-spacing: 1px;
+    }
+
+    .landing-header p { opacity: 0.92; font-size: 16px; }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 34px 28px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      transition: all 0.3s;
+      cursor: pointer;
+      text-decoration: none;
+      color: #1f2937;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.3);
+    }
+
+    .card .icon { font-size: 56px; margin-bottom: 16px; }
+
+    .card h2 {
+      color: #0f5132;
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #64748b;
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 18px;
+      flex: 1;
+    }
+
+    .card .badge {
+      display: inline-block;
+      padding: 5px 12px;
+      border-radius: 14px;
+      font-size: 12px;
+      font-weight: bold;
+      margin-bottom: 14px;
+    }
+
+    .badge-life { background: #d1fae5; color: #047857; }
+    .badge-claim { background: #fee2e2; color: #dc2626; }
+
+    .card .cta {
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(135deg, #0f5132 0%, #198754 100%);
+      color: white;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+
+    .footer {
+      text-align: center;
+      color: rgba(255,255,255,0.78);
+      margin-top: 30px;
+      font-size: 13px;
+    }
+  </style>
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#0f5132">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="三商美邦人壽">
+</head>
+<body>
+  <div class="landing">
+    <div class="landing-header">
+      <h1>🌿 三商美邦人壽智能服務平台</h1>
+      <p>提供壽險規劃建議與理賠案件初步檢視，協助您更快掌握保障與權益</p>
+      <p style="margin-top:14px;display:inline-block;background:rgba(255,255,255,0.18);padding:8px 18px;border-radius:20px;font-size:14px;">
+        👤 專屬保險業務：<strong>溫寧</strong>
+      </p>
+    </div>
+
+    <div class="cards">
+      <a href="/life.html" class="card">
+        <div class="icon">💼</div>
+        <span class="badge badge-life">壽險 / 健康險</span>
+        <h2>人壽保險規劃</h2>
+        <p>壽險、醫療、儲蓄、退休、節稅、傳承規劃<br>共 14 題，約 3 分鐘</p>
+        <div class="cta">開始諮詢 →</div>
+      </a>
+
+      <a href="/claim.html" class="card">
+        <div class="icon">📋</div>
+        <span class="badge badge-claim">理賠</span>
+        <h2>理賠檢視</h2>
+        <p>上傳保單 · 描述事件 · 取得理賠可行性分析與文件清單<br>3 步驟，約 3 分鐘</p>
+        <div class="cta">開始檢視 →</div>
+      </a>
+    </div>
+
+    <div class="footer">
+      © 三商美邦人壽 · 系統推薦僅為初步參考，實際規劃由保險業務 <strong style="color:#fff;">溫寧</strong> 為您協助
+    </div>
+  </div>
+  <script src="/js/pwa.js" defer></script>
+</body>
+</html>

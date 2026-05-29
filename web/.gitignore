@@ -1,0 +1,4 @@
+node_modules/
+data/customers.json
+.DS_Store
+.env
