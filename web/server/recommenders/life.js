@@ -86,9 +86,9 @@ function generateRecommendations(answers) {
       priority: 'high',
       category: 'medical',
       title: '兒少基礎保障組合',
-      products: ['金來寶小額終身壽險', '平安系列意外險', '安心醫療系列附約'],
+      products: ['三商美邦人壽好平安終身保險', '三商美邦人壽安心醫靠住院醫療定期健康保險(A型)', '三商美邦人壽漾健康終身醫療健康保險'],
       reason: '建立終身醫療基礎，早投保享低費率',
-      features: ['保費低廉', '終身保障', '醫療附約彈性'],
+      features: ['保費低廉', '終身保障', '住院 + 手術醫療雙重保障'],
       est_premium: '1,500 - 3,000 / 月',
     });
   } else if (answers.age === '19-30') {
@@ -97,9 +97,9 @@ function generateRecommendations(answers) {
         priority: 'high',
         category: 'life',
         title: '入門高保障方案',
-        products: ['安心好漾定期保險', '平安系列意外險'],
+        products: ['三商美邦人壽好平安終身保險', '三商美邦人壽新33醫靠醫療定期健康保險'],
         reason: '年輕時以低保費建立高保障',
-        features: ['保費便宜', '高保障額度', '可轉換終身險'],
+        features: ['保費便宜', '高保障額度', '醫療給付彈性'],
         est_premium: '1,500 - 3,500 / 月',
       });
     } else {
@@ -107,9 +107,9 @@ function generateRecommendations(answers) {
         priority: 'medium',
         category: 'saving',
         title: '青年理財儲蓄方案',
-        products: ['珍吉利利率變動型增額終身壽險', '新平準終身壽險'],
+        products: ['三商美邦人壽好加倍終身保險(定期給付型)', '三商美邦人壽漾健康終身醫療健康保險'],
         reason: '兼顧保障與資產累積',
-        features: ['保障遞增', '保單價值累積', '利率變動分享'],
+        features: ['定期生存金給付', '保單價值累積', '醫療終身保障'],
         est_premium: '4,000 - 8,000 / 月',
       });
     }
@@ -118,9 +118,9 @@ function generateRecommendations(answers) {
       priority: 'high',
       category: 'life',
       title: '家庭支柱保障方案',
-      products: ['新富享人生還本終身保險', '金享福保本終身健康保險'],
+      products: ['三商美邦人壽增加倍終身保險(定期給付型)', '三商美邦人壽愛關心重大傷病終身健康保險'],
       reason: '家庭主要收入者必備保障',
-      features: ['保費返還', '重大疾病保障', '保單質借功能'],
+      features: ['保額遞增', '重大傷病一次給付', '終身壽險保障家人'],
       est_premium: '5,000 - 12,000 / 月',
     });
     if (answers.income === '200_500' || answers.income === 'above_500') {
@@ -128,9 +128,9 @@ function generateRecommendations(answers) {
         priority: 'medium',
         category: 'saving',
         title: '資產增值方案',
-        products: ['月月吉利利率變動型還本終身保險', '吉鑽利利率變動型還本終身保險'],
-        reason: '穩定現金流 + 資產增值',
-        features: ['每月生存金', '宣告利率分享', '保單質借'],
+        products: ['三商美邦人壽增吉利美元利率變動型增額終身壽險(定期給付型)', '三商美邦人壽好加倍終身保險(定期給付型)'],
+        reason: '穩定現金流 + 美元資產配置',
+        features: ['美元計價', '宣告利率分享', '定期生存金'],
         est_premium: '8,000 - 20,000 / 月',
       });
     }
@@ -139,9 +139,9 @@ function generateRecommendations(answers) {
       priority: 'high',
       category: 'retirement',
       title: '退休準備方案',
-      products: ['金萬利終身保險', '金鑽豐利利率變動型還本終身保險'],
-      reason: '準備退休收入與長照規劃',
-      features: ['滿期金給付', '長照銜接', '年金轉換'],
+      products: ['三商美邦人壽珍愛樂活長期照顧終身保險', '三商美邦人壽心守健康手術醫療終身健康保險'],
+      reason: '準備退休後長照需求與醫療保障',
+      features: ['長照給付', '手術醫療終身保障', '退休安心'],
       est_premium: '8,000 - 18,000 / 月',
     });
   } else if (answers.age === '66+') {
@@ -149,9 +149,9 @@ function generateRecommendations(answers) {
       priority: 'high',
       category: 'ltc',
       title: '長照與傳承方案',
-      products: ['長照險系列', '年金險系列'],
-      reason: '退休期醫療保障與資產傳承',
-      features: ['長期照護給付', '穩定年金收入', '資產傳承'],
+      products: ['三商美邦人壽溢起樂活長期照顧終身保險', '三商美邦人壽守安康防癌終身健康保險'],
+      reason: '退休期長照與防癌保障，並可作為資產傳承工具',
+      features: ['長期照護分期給付', '罹癌一次金 + 療程金', '指定受益人傳承'],
       est_premium: '6,000 - 15,000 / 月',
     });
   }
@@ -167,9 +167,9 @@ function generateRecommendations(answers) {
         priority: 'high',
         category: 'tax',
         title: '⭐ 高資產節稅傳承方案（優先）',
-        products: ['新吉好利利率變動型增額終身壽險', '珍吉利利率變動型增額終身壽險'],
-        reason: '將應稅資產轉為保險資產，保險給付免計入遺產',
-        features: ['節稅效益顯著', '保額逐年遞增', '指定受益人傳承'],
+        products: ['三商美邦人壽金增吉利美元利率變動型增額終身壽險(定期給付型)', '三商美邦人壽金增多利美元利率變動型增額終身壽險(定期給付型)'],
+        reason: '將應稅資產轉為保險資產，保險給付依規定可享稅務優惠',
+        features: ['美元計價節稅效益', '保額逐年遞增', '指定受益人傳承'],
         est_premium: '15,000 - 50,000 / 月',
       });
     }
@@ -178,9 +178,9 @@ function generateRecommendations(answers) {
         priority: 'high',
         category: 'inheritance',
         title: '資產保護 / 債務隔離方案',
-        products: ['金好運萬能終身壽險(V1)', '吉鑽利利率變動型還本終身壽險'],
+        products: ['三商美邦人壽吉美永盛美元利率變動型終身壽險(定期給付型)', '三商美邦人壽吉美永達美元利率變動型終身壽險(定期給付型)'],
         reason: '保險金原則上不得扣押，保護家族資產',
-        features: ['債權隔離', '保單價值累積', '質借靈活運用'],
+        features: ['銀行通路規劃', '保單價值累積', '美元計價'],
         est_premium: '20,000 - 60,000 / 月',
       });
     }
@@ -189,9 +189,9 @@ function generateRecommendations(answers) {
         priority: 'medium',
         category: 'inheritance',
         title: '多世代傳承方案',
-        products: ['金來寶小額終身壽險', '新富享人生還本終身保險'],
-        reason: '直接指定受益人，跨代傳承節稅',
-        features: ['跨代給付', '避免繼承程序', '結合家族信託'],
+        products: ['三商美邦人壽增加倍終身保險(定期給付型)', '三商美邦人壽好加倍終身保險(定期給付型)'],
+        reason: '直接指定受益人，跨代傳承規劃',
+        features: ['保額遞增', '定期生存金回流', '指定受益人'],
         est_premium: '10,000 - 30,000 / 月',
       });
     }
@@ -199,15 +199,15 @@ function generateRecommendations(answers) {
 
   if (
     (answers.foreign_currency === 'yes_usd' || answers.foreign_currency === 'yes_aud') &&
-    !recommendations.some((r) => r.products.includes('加美利外幣利率變動型增額終身壽險'))
+    !recommendations.some((r) => r.products.some((p) => p.includes('美元')))
   ) {
     recommendations.push({
       priority: 'low',
       category: 'foreign',
       title: '外幣資產配置方案',
-      products: ['加美利外幣利率變動型增額終身壽險'],
-      reason: '美元 / 澳幣資產配置，匯率避險 + 節稅',
-      features: ['外幣計價', '資產分散', '節稅傳承'],
+      products: ['三商美邦人壽增吉利美元利率變動型增額終身壽險(定期給付型)', '三商美邦人壽增多利美元利率變動型增額終身壽險(定期給付型)'],
+      reason: '美元資產配置，匯率避險與長期增值',
+      features: ['美元計價', '資產分散', '宣告利率分享'],
       est_premium: '8,000 - 25,000 / 月',
     });
   }
