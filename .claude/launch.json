@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "mli",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["start", "--prefix", "web/server"],
+      "port": 3100,
+      "env": { "PORT": "3100", "ADMIN_PASS": "mli2024" }
+    }
+  ]
+}
